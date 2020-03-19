@@ -12,6 +12,8 @@
 - [ ] edit task
 - [ ] record deadline
 
+![ToDoList](https://i.imgur.com/2dnzUf9.png)
+
 
 #### Github Pages
 https://schiafang.github.io/todo-list/
