@@ -1,14 +1,59 @@
-.checked {
-  color: #ccc;
-  text-decoration: line-through;
-  font-style: italic;
+/* * {
+  border: 0.5px solid pink;
+} */
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=955&q=80);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 380px;
+  opacity: 0.9;
+}
+
+.card-body {
+  margin-bottom: -20px;
+}
+
+.card h4 {
+  display: flex;
+  justify-content: center;
+  margin: 30px 20px 0px 20px;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .fa {
-  margin: 0 5px;
+  margin: 5px;
   color: #bbb;
 }
 
-li>label[for='todo'] {
-  width: 210px;
+li > label {
+  width: 250px;
 }
+
+li {
+  display: flex;
+  justify-content: center;
+}
+
+/* .checked {
+  color: #ccc;
+  text-decoration: line-through;
+  font-style: italic;
+} */

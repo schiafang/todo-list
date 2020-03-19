@@ -14,17 +14,39 @@
 </head>
 
 <body>
-  <div class="m-5">
-    <header class="mb-3">
-      <h4>My Todo</h4>
-      <div class="form-inline">
-        <input type="text" placeholder="add item" id="newTodo" class="form-control mr-2">
+  <div class="container m-5">
+    <header class="card mb-3">
+      <h4>My Todo List</h4>
+      <div class="form-inline mb-4">
+        <input type="text" placeholder="add todo item" id="newTodo" class="form-control mt-2 mr-2 col-6">
         <button id="addBtn" class="btn btn-info">Add</button>
       </div>
     </header>
-    <ul id="my-todo" class="list-unstyled">
-      <!-- display todos here -->
-    </ul>
+    <div class="card">
+      <div class="card-header h4">TODO</div>
+      <div class="card-body">
+        <ul id="my-todo" class="list-unstyled">
+          <!-- display addTodoItem -->
+        </ul>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-header h4">DONE</div>
+      <div class="card-body">
+        <ul id="my-done" class="list-unstyled">
+          <!-- display addDoneItem -->
+        </ul>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-header h4">TRASH</div>
+      <div class="card-body">
+        <ul id="my-trash" class="list-unstyled">
+          <!-- display addTrashItem -->
+        </ul>
+      </div>
+    </div>
+  </div>
   </div>
   <script src="main.js"></script>
 </body>
