@@ -1,11 +1,11 @@
 const todos = ['Hit the gym', 'Read a book', 'Buy eggs', 'Organize office', 'Pay bills']
-
 const addBtn = document.querySelector('#addBtn')
 const input = document.querySelector('#newTodo')
 
 let todoList = document.querySelector('#my-todo')
 let doneList = document.querySelector('#my-done')
 let trashList = document.querySelector('#my-trash')
+let cleanTrash = document.querySelector('#clean-trash')
 
 for (let todo of todos) {
   addTodoItem(todo)
@@ -62,12 +62,23 @@ doneList.addEventListener('click', function (event) {
 // 監聽trashList上操作
 trashList.addEventListener('click', function (event) {
   let li = event.target.parentElement
+  let text = event.target.parentElement.children[0].innerText
 
   if (event.target.classList.contains('delete')) {
     li.remove()
+  } else if (event.target.classList.contains('undo')) {
+    li.remove()
+    addTodoItem(text)
   }
 })
 
+// 監聽clean-trash上操作
+cleanTrash.addEventListener('click', function (event) {
+  trashList.innerHTML = `
+      <ul id="my-trash" class="list-unstyled">
+        <!-- display addTrashItem -->
+      </ul>`
+})
 
 ///----- Function -----///
 function addTodoItem(text) {
@@ -94,6 +105,7 @@ function addTrashItem(text) {
   let trashItem = document.createElement('li')
   trashItem.innerHTML = `
     <label for="trash">${text}</label>
+    <i class="undo fa fa-undo" aria-hidden="true"></i>
     <i class="delete fa fa-trash-o" aria-hidden="true"></i>
   `
   trashList.appendChild(trashItem)
